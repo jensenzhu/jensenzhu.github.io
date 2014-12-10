@@ -143,13 +143,7 @@
             </sources>
             <sources dir="${basedir}">
                 <file name="src/resource.js"/>
-                <file name="src/PageViewer.js"/>
-                <file name="src/zip.js"/>
-                <file name="src/zip-fs.js"/>
-                <file name="src/zip-ext.js"/>
-                <file name="src/deflate.js"/>
-                <file name="src/inflate.js"/>
-                <file name="src/zipParse.js"/>
+                <file name="src/BookReader.js"/>
                 <file name="main.js"/>
 
             </sources>
