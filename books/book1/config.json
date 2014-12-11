@@ -3,7 +3,64 @@
     "Pages" : [
         {
             "Background":"00.png",
-            "Sound":"HD_CaiZhenZhu_help.mp3"
+            "Sound":"HD_CaiZhenZhu_help.mp3",
+            "Animations":[
+                {
+                    "name":"right_flag",
+                    "frames":[
+                        {
+                            "png":"DH_flag_right1.png"
+                        },
+                        {
+                            "png":"DH_flag_right2.png"
+                        },
+                        {
+                            "png":"DH_flag_right3.png"
+                        }
+                    ],
+                    "delay":9,
+                    "position_x":358,
+                    "position_y":644
+                },
+                {
+                    "name":"butterfly",
+                    "frames":[
+                        {
+                            "png":"DH_butterfly_01.png"
+                        },
+                        {
+                            "png":"DH_butterfly_02.png"
+                        },
+                        {
+                            "png":"DH_butterfly_01.png"
+                        },
+                        {
+                            "png":"DH_butterfly_01.png"
+                        },
+                        {
+                            "png":"DH_butterfly_01.png"
+                        },
+                        {
+                            "png":"DH_butterfly_01.png"
+                        },
+                        {
+                            "png":"DH_butterfly_01.png"
+                        },
+                        {
+                            "png":"DH_butterfly_01.png"
+                        },
+                        {
+                            "png":"DH_butterfly_01.png"
+                        },
+                        {
+                            "png":"DH_butterfly_01.png"
+                        }
+                    ],
+                    "delay":10,
+                    "position_x":638,
+                    "position_y":332
+                }
+            ]
         },
         {
             "Background":"01.png",
