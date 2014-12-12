@@ -2,62 +2,72 @@
     "BookName": "你好",
     "Pages" : [
         {
-            "Background":"00.png",
+            "Background":"00_background.png",
             "Animations":[
                 {
-                    "name":"right_flag",
+                    "name":"bear",
                     "frames":[
                         {
-                            "png":"DH_flag_right1.png"
+                            "png":"bear01.png"
                         },
                         {
-                            "png":"DH_flag_right2.png"
+                            "png":"bear02.png"
                         },
                         {
-                            "png":"DH_flag_right3.png"
+                            "png":"bear03.png"
+                        },
+                        {
+                            "png":"bear04.png"
                         }
                     ],
                     "delay":9,
-                    "position_x":358,
-                    "position_y":644
+                    "position_x":400,
+                    "position_y":300
                 },
                 {
-                    "name":"butterfly",
+                    "name":"mouse",
                     "frames":[
                         {
-                            "png":"DH_butterfly_01.png"
+                            "png":"mouse01.png"
                         },
                         {
-                            "png":"DH_butterfly_02.png"
+                            "png":"mouse02.png"
                         },
                         {
-                            "png":"DH_butterfly_01.png"
-                        },
-                        {
-                            "png":"DH_butterfly_01.png"
-                        },
-                        {
-                            "png":"DH_butterfly_01.png"
-                        },
-                        {
-                            "png":"DH_butterfly_01.png"
-                        },
-                        {
-                            "png":"DH_butterfly_01.png"
-                        },
-                        {
-                            "png":"DH_butterfly_01.png"
-                        },
-                        {
-                            "png":"DH_butterfly_01.png"
-                        },
-                        {
-                            "png":"DH_butterfly_01.png"
+                            "png":"mouse03.png"
                         }
                     ],
                     "delay":10,
-                    "position_x":638,
-                    "position_y":332
+                    "position_x":708,
+                    "position_y":260
+                },
+                {
+                    "name":"ni",
+                    "frames":[
+                        {
+                            "png":"ni01.png"
+                        },
+                        {
+                            "png":"ni02.png"
+                        }
+                    ],
+                    "delay":10,
+                    "position_x":300,
+                    "position_y":632
+                },
+                {
+                    "name":"hao",
+                    "frames":[
+                        {
+                            "png":"hao01.png"
+                        },
+                        {
+                            "png":"hao02.png"
+                        }
+                    ],
+                    "delay":10,
+                    "position_x":438,
+                    "position_y":632
                 }
             ]
         },
