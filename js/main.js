@@ -1,40 +1,69 @@
 /**
  * Created by macpro on 15/9/10.
  */
-var data = [
-    {key:0, value:"世", time:"2s", delay:"0s", width:"50px", height:"60px", x:"20px", y:"20px"},
-    {key:1,value:"界", time:"2s", delay:"2s", width:"50px", height:"60px", x:"70px", y:"20px"},
-    {key:2,value:"你", time:"2s", delay:"4s", width:"50px", height:"60px", x:"120px", y:"20px"},
-    {key:3,value:"好", time:"2s", delay:"6s", width:"50px", height:"60px", x:"170px", y:"20px"}
-];
+
 var Word = React.createClass({
 
     render:function(){
-        var ani = 'ani-h3 '+this.props.time+' forwards infinite';
+        var ani = 'ani-h3 '+this.props.time+'s forwards infinite';
         var divStyle = {
-            position: 'absolute',
-            left: this.props.x,
-            top: this.props.y,
+            display: 'block',
+            fontSize: this.props.width,
+            margin: '0 auto',
+            fontFamily: 'Arial',
+            textAlign: 'center',
+            color: 'transparent',
+            backgroundColor: '#000',
+            backgroundImage: 'url(bg.png)',
+            backgroundPosition: 'left center',
+            backgroundRepeat: 'no-repeat',
+            WebkitBackgroundSize: '0% 100%',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            float:'left',
+//            position: 'absolute',
+//            left: this.props.x,
+//            top: this.props.y,
             width: this.props.width,
             height: this.props.height,
             WebkitAnimation: ani,
             animation: ani,
-            animationDelay:this.props.delay,
-            WebkitAnimationDelay:this.props.delay,
+            animationDelay:this.props.delay+'s',
+            WebkitAnimationDelay:this.props.delay+'s',
             animationIterationCount:'1',
             WebkitAnimationIterationCount:'1',
-            cursor:'pointer'
+            cursor:'pointer',
+            listStyle:'none', /* 将默认的列表符号去掉 */
+            padding:'0', /* 将默认的内边距去掉 */
+            margin:'0' /* 将默认的外边距去掉 */
         };
         var divStyleNo = {
-            position: 'absolute',
-            left: this.props.x, // 注意这里的首字母'W'是大写
-            top: this.props.y, // 'ms'是唯一一个首字母需要小写的浏览器前缀
+            display: 'block',
+            fontSize: this.props.width,
+            margin: '0 auto',
+            fontFamily: 'Arial',
+            textAlign: 'center',
+            color: 'transparent',
+            backgroundColor: '#000',
+            backgroundImage: 'url(bg.png)',
+            backgroundPosition: 'left center',
+            backgroundRepeat: 'no-repeat',
+            WebkitBackgroundSize: '0% 100%',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            float:'left',
+//            position: 'absolute',
+//            left: this.props.x, // 注意这里的首字母'W'是大写
+//            top: this.props.y, // 'ms'是唯一一个首字母需要小写的浏览器前缀
             width: this.props.width,
             height: this.props.height,
-            cursor:'pointer'
+            cursor:'pointer',
+            listStyle:'none', /* 将默认的列表符号去掉 */
+            padding:'0', /* 将默认的内边距去掉 */
+            margin:'0'
         };
         return(
-            <li className={(this.props.begin=="true") ? "word" : "word_no"} style={(this.props.begin=="true") ? divStyle : divStyleNo}>{this.props.value}</li>
+            <li style={(this.props.begin=="true") ? divStyle : divStyleNo}>{this.props.value}</li>
             );
     }
 });
@@ -42,25 +71,65 @@ var Sentence = React.createClass({
     getInitialState: function() {
         return {run: false};
     },
+    handleStop: function(time) {
+
+        var self=this;
+        setTimeout(function(){
+            self.setState({run: false});
+        },time);
+
+    },
     handleClick: function(event) {
         this.setState({run: !this.state.run});
+        if(!this.state.run){
+            this.handleStop(this.props.endTime);
+        }
+    },
+    componentDidMount: function() {
+        this.loadFromServer();
+//        setInterval(this.loadFromServer, 0);
+    },
+    loadFromServer: function() {
+        $.ajax({
+            url: this.props.url,
+            dataType: 'json',
+            success: function(data) {
+                this.setState({data: data});
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+            }.bind(this)
+        });
     },
     render: function() {
         var text = this.state.run ? 'true' : 'false';
-        var commentNodes = this.props.data.map(function (comment) {
+        if(this.state.data){
+            var commentNodes = this.state.data.map(function (comment) {
+                return (
+                    <Word key={comment.key} value={comment.value} begin={text} time={comment.time} delay={comment.delay} width={comment.width} height={comment.height} x={comment.x} y={comment.y}/>
+                    );
+            });
+
             return (
-                <Word key={comment.key} value={comment.value} begin={text} time={comment.time} delay={comment.delay} width={comment.width} height={comment.height} x={comment.x} y={comment.y}/>
+                <div id="sentence" >
+                    <div className="content" onClick={this.handleClick}>
+                            {commentNodes}
+                        </div>
+                </div>
                 );
-        });
-        return (
-            <div id="sentence" onClick={this.handleClick}>
-                {commentNodes}
-            </div>
-            );
+        }
+        else{
+            return (
+                <div id="sentence" className="container-fluid" onClick={this.handleClick}>
+
+                </div>
+                );
+        }
+
     }
 });
 React.render(
-    <Sentence data={data}/>,
+    <Sentence url="words.json" endTime="4330"/>,
     document.getElementById('example')
 );
 //less.modifyVars({
