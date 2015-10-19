@@ -1,13 +1,20 @@
 [
-    {"key":0,"value":"世", "time":0.5, "delay":0, "width":50, "height":60, "x":50, "y":"20px"},
-    {"key":1,"value":"界", "time":0.3, "delay":0.5, "width":50, "height":60, "x":"70px", "y":"20px"},
-    {"key":2,"value":"你", "time":0.7, "delay":0.8, "width":50, "height":60, "x":"70px", "y":"80px"},
-    {"key":3,"value":"好", "time":0.5, "delay":1.5, "width":50, "height":60, "x":"70px", "y":"120px"},
-    {"key":4,"value":"!", "time":0.03, "delay":2.0, "width":50, "height":60, "x":"120px", "y":"120px"},
-    {"key":5,"value":"好", "time":0.1, "delay":2.03, "width":50, "height":"60px", "x":"170px", "y":"120px"},
-    {"key":6,"value":"、", "time":0.1, "delay":2.13, "width":50, "height":"60px", "x":"220px", "y":"120px"},
-    {"key":7,"value":"好", "time":0.5, "delay":2.23, "width":50, "height":"60px", "x":"270px", "y":"120px"},
-    {"key":8,"value":"好", "time":0.8, "delay":2.73, "width":50, "height":"60px", "x":"350px", "y":"120px"},
-    {"key":9,"value":"好", "time":0.4, "delay":3.53, "width":50, "height":"60px", "x":"420px", "y":"120px"}
+    {"key":0,"value":"第", "time":0.5, "delay":0, "width":20, "height":30},
+    {"key":1,"value":"一", "time":0.3, "delay":0.5, "width":20, "height":30, "x":"70px", "y":"20px"},
+    {"key":2,"value":"课", "time":0.7, "delay":0.8, "width":20, "height":30, "x":"70px", "y":"80px"},
+    {"key":3,"value":"看", "time":0.5, "delay":1.5, "width":20, "height":30, "x":"70px", "y":"120px"},
+    {"key":4,"value":"图", "time":0.03, "delay":2.0, "width":20, "height":30, "x":"120px", "y":"120px"},
+    {"key":5,"value":"写", "time":0.1, "delay":2.03, "width":20, "height":"30px", "x":"170px", "y":"120px"},
+    {"key":6,"value":"字", "time":0.1, "delay":2.13, "width":20, "height":"30px", "x":"220px", "y":"120px"},
+    {"key":7,"value":"“", "time":0.5, "delay":2.23, "width":20, "height":"30px", "x":"270px", "y":"120px"},
+    {"key":8,"value":"六", "time":0.8, "delay":2.73, "width":20, "height":"30px", "x":"350px", "y":"120px"},
+    {"key":9,"value":"合", "time":0.4, "delay":3.53, "width":20, "height":"30px", "x":"420px", "y":"120px"},
+    {"key":10,"value":"法", "time":0.4, "delay":3.93, "width":20, "height":"30px", "x":"420px", "y":"120px"},
+    {"key":11,"value":"”", "time":0.4, "delay":4.33, "width":20, "height":"30px", "x":"420px", "y":"120px"},
+    {"key":12,"value":"练", "time":0.4, "delay":4.73, "width":20, "height":"30px", "x":"420px", "y":"120px"},
+    {"key":13,"value":"习", "time":0.4, "delay":5.13, "width":20, "height":"30px", "x":"420px", "y":"120px"},
+    {"key":14,"value":"（", "time":0.4, "delay":5.53, "width":20, "height":"30px", "x":"420px", "y":"120px"},
+    {"key":15,"value":"一", "time":0.4, "delay":5.93, "width":20, "height":"30px", "x":"420px", "y":"120px"},
+    {"key":16,"value":"）", "time":0.4, "delay":6.43, "width":20, "height":"30px", "x":"420px", "y":"120px"}
 
 ]
