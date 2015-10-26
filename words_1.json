@@ -1,0 +1,8 @@
+[
+    {"key":0,"value":"《", "time":0.5, "delay":0, "width":20, "height":30, "x":50, "y":"20px"},
+    {"key":1,"value":"上", "time":0.3, "delay":0.5, "width":20, "height":30, "x":"70px", "y":"20px"},
+    {"key":2,"value":"学", "time":0.7, "delay":0.8, "width":20, "height":30, "x":"70px", "y":"80px"},
+    {"key":3,"value":"校", "time":0.5, "delay":1.5, "width":20, "height":30, "x":"70px", "y":"120px"},
+    {"key":4,"value":"》", "time":0.03, "delay":2.0, "width":20, "height":30, "x":"120px", "y":"120px"}
+
+]

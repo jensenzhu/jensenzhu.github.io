@@ -1,0 +1,6 @@
+<xmc>
+    <page thumbnail="lesson1/image.jpg" html="lesson1/lensson_images/lesson1.html"></page>
+    <page thumbnail="lesson2/image.jpg" html="lesson2/lensson_images/lesson2.html"></page>
+    <page thumbnail="lesson3/image.jpg" html="lesson3/lensson_images/lesson3.html"></page>
+    <page thumbnail="lesson4/image.jpg" html="lesson4/lensson_images/lesson4.html"></page>
+</xmc>
